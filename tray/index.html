@@ -4,66 +4,73 @@
 <meta name="robots" content="noindex">
 <title>HELIOS Tray</title>
 <style>
-:root{--bg:#0b0d10;--card:#15181e;--line:#242a33;--ink:#eef1f5;--mut:#8b95a5;--ok:#22c55e;--off:#6b7280;--brand:#f59e0b}
+:root{--bg:#0a0c10;--card:#14181f;--line:#232a35;--ink:#eef1f6;--mut:#8a94a6;--ok:#22c55e;--warn:#f59e0b;--off:#4b5563;--brand:#f59e0b}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-.wrap{max-width:760px;margin:0 auto;padding:22px 16px 60px}
-h1{font-size:1.15rem;letter-spacing:-.01em;margin:0 0 2px}
-.sub{color:var(--mut);font-size:.82rem;margin:0 0 20px}
-h2{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:26px 0 10px;font-weight:700}
-.grid{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
-a.app,div.app{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:inherit;transition:.12s}
+.wrap{max-width:780px;margin:0 auto;padding:20px 15px 70px}
+h1{font-size:1.12rem;margin:0 0 3px;letter-spacing:-.01em}
+.sub{color:var(--mut);font-size:.8rem;margin:0 0 18px}
+h2{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mut);margin:26px 0 9px;font-weight:700;display:flex;align-items:center;gap:8px}
+h2:after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;gap:9px;grid-template-columns:repeat(auto-fill,minmax(155px,1fr))}
+a.app,div.app{display:block;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:13px 12px;text-decoration:none;color:inherit;position:relative}
 a.app:active{transform:scale(.985)}
 a.app:hover{border-color:var(--brand)}
-.e{font-size:1.4rem;display:block;margin-bottom:6px}
-.n{font-weight:700;font-size:.95rem;letter-spacing:-.01em}
-.d{color:var(--mut);font-size:.78rem;margin-top:3px;line-height:1.35}
-div.app{opacity:.42}
-.tag{float:right;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--off);font-weight:700}
-.live{color:var(--ok)}
-.foot{margin-top:28px;color:var(--mut);font-size:.76rem;text-align:center;line-height:1.6}
+.e{font-size:1.3rem;display:block;margin-bottom:5px}
+.n{font-weight:700;font-size:.9rem;letter-spacing:-.01em;line-height:1.25}
+.d{color:var(--mut);font-size:.72rem;margin-top:3px;line-height:1.35}
+.dot{position:absolute;top:11px;right:11px;width:7px;height:7px;border-radius:50%;background:var(--off)}
+.dot.on{background:var(--ok);box-shadow:0 0 7px var(--ok)}
+.dot.mini{background:var(--warn)}
+div.app{opacity:.38}
+.foot{margin-top:26px;color:var(--mut);font-size:.73rem;text-align:center;line-height:1.7}
 </style></head><body><div class="wrap">
 <h1>HELIOS Tray</h1>
-<p class="sub">Everything still standing, in one page. Green = live from the cloud.</p>
+<p class="sub">Live status · green = answering now · amber = runs on the mini · grey = offline</p>
 
 <h2>Money</h2>
 <div class="grid">
-  <a class="app" href="https://titan-express.online/titan-express-business/"><span class="tag live">live</span><span class="e">💼</span><span class="n">Business Suite</span><div class="d">7 offers, live Stripe checkout</div></a>
-  <a class="app" href="https://juniorf908908.github.io/titan-demos/"><span class="tag live">live</span><span class="e">🖥</span><span class="n">Website Demos</span><div class="d">22 prospect previews built tonight</div></a>
-  <a class="app" href="https://titan-express.online/kastros-finds/"><span class="tag live">live</span><span class="e">🛍️</span><span class="n">Kastro's Finds</span><div class="d">Amazon link tree, tag juniorfern014-20</div></a>
-  <a class="app" href="https://titan-express.online/amazon-finder/"><span class="tag live">live</span><span class="e">🔎</span><span class="n">Amazon Finder</span><div class="d">Product picker + captions</div></a>
-  <a class="app" href="https://www.etsy.com/shop/UsNotThem"><span class="tag live">live</span><span class="e">🧵</span><span class="n">UsNotThem Etsy</span><div class="d">89 listings, SEO rebuilt tonight</div></a>
-  <a class="app" href="https://dashboard.stripe.com"><span class="tag live">live</span><span class="e">💳</span><span class="n">Stripe</span><div class="d">Charges + payouts enabled</div></a>
+  <a class="app" href="https://titan-express.online/titan-express-business/"><span class="dot on"></span><span class="e">💼</span><span class="n">Business Suite</span><div class="d">7 offers · Stripe live</div></a>
+  <a class="app" href="https://juniorf908908.github.io/titan-demos/"><span class="dot on"></span><span class="e">🖥</span><span class="n">Website Demos</span><div class="d">22 prospect previews</div></a>
+  <a class="app" href="https://titan-express.online/kastros-finds/"><span class="dot on"></span><span class="e">🛍️</span><span class="n">Kastro's Finds</span><div class="d">Amazon tree · juniorfern014-20</div></a>
+  <a class="app" href="https://titan-express.online/amazon-finder/"><span class="dot on"></span><span class="e">🔎</span><span class="n">Amazon Finder</span><div class="d">Product picker</div></a>
+  <a class="app" href="https://www.etsy.com/shop/UsNotThem"><span class="dot on"></span><span class="e">🧵</span><span class="n">UsNotThem Etsy</span><div class="d">89 listings · SEO rebuilt</div></a>
+  <a class="app" href="https://dashboard.stripe.com"><span class="dot on"></span><span class="e">💳</span><span class="n">Stripe</span><div class="d">Payouts enabled</div></a>
+</div>
+
+<h2>Apps · run on the mini, served through the cloud</h2>
+<div class="grid">
+  <a class="app" href="https://city.titan-express.online/"><span class="dot on"></span><span class="e">🏙</span><span class="n">Titan City</span><div class="d">Agent company · :8936</div></a>
+  <a class="app" href="https://city.titan-express.online/titan-city/"><span class="dot mini"></span><span class="e">🕹</span><span class="n">Titan City PLAY</span><div class="d">First person view</div></a>
+  <a class="app" href="https://city.titan-express.online/jellyfin/"><span class="dot mini"></span><span class="e">🎬</span><span class="n">Jellyfin</span><div class="d">Media server · :8096</div></a>
 </div>
 
 <h2>Comms</h2>
 <div class="grid">
-  <a class="app" href="https://mail.titan-express.online"><span class="tag live">live</span><span class="e">✉️</span><span class="n">Titan Mail</span><div class="d">helios@ / god@ titan-express.online</div></a>
-  <a class="app" href="tel:+19082240576"><span class="tag live">call</span><span class="e">📞</span><span class="n">Main Line</span><div class="d">908-224-0576 · greets + forwards</div></a>
-  <a class="app" href="https://console.twilio.com"><span class="tag live">live</span><span class="e">☎️</span><span class="n">Twilio</span><div class="d">$19.84 credit · number active</div></a>
+  <a class="app" href="tel:+19082240576"><span class="dot on"></span><span class="e">📞</span><span class="n">Main Line</span><div class="d">Ava answers · 908-224-0576</div></a>
+  <a class="app" href="https://rep.titan-express.online/"><span class="dot on"></span><span class="e">☀️</span><span class="n">Ava (Worker)</span><div class="d">Cloudflare · always on</div></a>
+  <a class="app" href="https://mail.titan-express.online"><span class="dot on"></span><span class="e">✉️</span><span class="n">Titan Mail</span><div class="d">helios@ / god@</div></a>
+  <a class="app" href="https://console.twilio.com"><span class="dot on"></span><span class="e">☎️</span><span class="n">Twilio</span><div class="d">Number active</div></a>
 </div>
 
-<h2>Builder</h2>
+<h2>System</h2>
 <div class="grid">
-  <a class="app" href="https://github.com/Juniorf908908/titan-demos"><span class="tag live">live</span><span class="e">🐙</span><span class="n">GitHub</span><div class="d">titan-demos repo + Pages</div></a>
-  <a class="app" href="https://github.com/Juniorf908908"><span class="tag live">live</span><span class="e">📦</span><span class="n">All Repos</span><div class="d">13 repositories</div></a>
+  <a class="app" href="https://juniorf908908.github.io/titan-demos/tray/"><span class="dot on"></span><span class="e">🧭</span><span class="n">This Tray</span><div class="d">Bookmark this</div></a>
+  <a class="app" href="https://github.com/Juniorf908908"><span class="dot on"></span><span class="e">🐙</span><span class="n">GitHub</span><div class="d">13 repos</div></a>
+  <a class="app" href="https://dash.cloudflare.com"><span class="dot on"></span><span class="e">🌩</span><span class="n">Cloudflare</span><div class="d">DNS · Workers</div></a>
 </div>
 
-<h2>Offline — needs the machine back</h2>
+<h2>Offline · needs the PC up</h2>
 <div class="grid">
-  <div class="app"><span class="e">🏙</span><span class="n">Titan City</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">🎬</span><span class="n">Titan Studios</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">🏛</span><span class="n">Titan Council</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">⚡</span><span class="n">Titan Builder</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">🎞</span><span class="n">Cartoon Factory</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">☀️</span><span class="n">HELIOS Live</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">🎮</span><span class="n">Game Factory</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">📞</span><span class="n">Rep Engine UI</span><div class="d">tunnel down — calls still work</div></div>
-  <div class="app"><span class="e">⚡</span><span class="n">HELIOS HUD</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">🖥</span><span class="n">Titan Flow</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">🧙</span><span class="n">Code Wizard</span><div class="d">tunnel down</div></div>
-  <div class="app"><span class="e">🕵</span><span class="n">Titan Audit</span><div class="d">tunnel down</div></div>
+  <div class="app"><span class="e">🎬</span><span class="n">Titan Studios</span><div class="d">media entity</div></div>
+  <div class="app"><span class="e">🏛</span><span class="n">Titan Council</span><div class="d">governance</div></div>
+  <div class="app"><span class="e">⚡</span><span class="n">Titan Builder</span><div class="d">websites by words</div></div>
+  <div class="app"><span class="e">🎞</span><span class="n">Cartoon Factory</span><div class="d">idea → episode</div></div>
+  <div class="app"><span class="e">☀️</span><span class="n">HELIOS Live</span><div class="d">voice + canvas</div></div>
+  <div class="app"><span class="e">🎮</span><span class="n">Game Factory</span><div class="d">HTML5 games</div></div>
+  <div class="app"><span class="e">📞</span><span class="n">Rep Engine UI</span><div class="d">calls work without it</div></div>
+  <div class="app"><span class="e">⚡</span><span class="n">HELIOS HUD</span><div class="d">:8793 down</div></div>
 </div>
 
-<p class="foot">Hosted on GitHub Pages — survives the machine being down.<br>HELIOS · rebuilt 2026-11-02</p>
+<p class="foot">Served from GitHub Pages — this page cannot go down.<br>Apps marked amber run on your mini and are routed through the cloud.</p>
 </div></body></html>
